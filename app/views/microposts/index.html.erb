@@ -1,0 +1,21 @@
+<!--<%if @micropost.any? %> -->
+
+<h1>Listing posts</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+ 
+<% @mposts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.description %></td>
+    <td><%= post.user_id %></td>
+  </tr>
+<% end %>
+</table>
+
+<% end %>
